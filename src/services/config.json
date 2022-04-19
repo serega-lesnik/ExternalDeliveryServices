@@ -1,0 +1,31 @@
+{
+  "external_delivery": {
+    "ups": {
+      "urlRoot": "https://www.ups.com/track",
+      "urlApi": "https://www.ups.com/track/api/Track/GetStatus?loc=en_US",
+      "detailPath": "trackDetails[0]",
+      "pickDetails": [
+        "trackingNumber",
+        "packageStatus",
+        "deliveredDate",
+        "deliveredTime",
+        "receivedBy"
+      ],
+      "deliveryStatus":"Delivered"
+    },
+    "fedex": {
+      "urlRoot": "https://www.fedex.com/en-us/home.html",
+      "urlApi": "https://api.fedex.com/track/v2/shipments",
+      "detailPath": "TrackPackagesResponse.packageList[0]",
+      "pickDetails": [
+        "trackingNbr",
+        "keyStatus",
+        "displayActDeliveryDt",
+        "displayActDeliveryTm",
+        "receivedByNm",
+        "shipDt"
+      ],
+      "deliveryStatus": "Delivered"
+    }
+  }
+}
